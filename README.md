@@ -3,6 +3,7 @@ sudo apt-get install cmake
 make
 cd build/Release/
 sudo make install
+sudo ldconfig
 
 Open source version of the STMicroelectronics Stlink Tools
 ==========================================================
