@@ -1,3 +1,9 @@
+sudo apt-get install libusb-1.0 libusb-1.0.0-dev
+sudo apt-get install cmake
+make
+cd build/Release/
+sudo make install
+
 Open source version of the STMicroelectronics Stlink Tools
 ==========================================================
 
