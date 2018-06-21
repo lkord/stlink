@@ -5,6 +5,17 @@ cd build/Release/
 sudo make install
 sudo ldconfig
 
+ cat /etc/udev/rules.d/49-stlinkv2.rules
+# stm32 discovery boards, with onboard st/linkv2
+# ie, STM32L, STM32F4.
+# STM32VL has st/linkv1, which is quite different
+
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="3748", \
+    MODE:="0666", \
+    SYMLINK+="stlinkv2_%n"
+
+MODE->0777
+
 Open source version of the STMicroelectronics Stlink Tools
 ==========================================================
 
